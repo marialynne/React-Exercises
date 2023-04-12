@@ -5,6 +5,7 @@ import './MovieCard.scss';
 import { IMAGE_SOURCE, movies } from '../../constants/moviesMock';
 import genres from 'constants/genres.json';
 import { MovieCardProps } from './types';
+import { ShowLabel } from './styles';
 
 
 const MovieCard: React.FC<MovieCardProps> = (
@@ -35,7 +36,7 @@ const MovieCard: React.FC<MovieCardProps> = (
             </div>
             <div className="info-show">
                 <div className="show-title">
-                    <div className="show-label">{getGenre(genreId)}</div>
+                    <ShowLabel>{getGenre(genreId)}</ShowLabel>
                     <p className="show-label-title">{title}</p>
                     <p className="show-calification">{vote_average}</p>
                 </div>
